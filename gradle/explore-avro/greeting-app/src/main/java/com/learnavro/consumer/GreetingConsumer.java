@@ -12,7 +12,6 @@ import java.util.Properties;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
-import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.common.serialization.ByteArrayDeserializer;
 import org.apache.kafka.common.serialization.StringDeserializer;
@@ -35,7 +34,7 @@ public class GreetingConsumer {
     consumer.subscribe(Collections.singletonList(GREETING_TOPIC));
     log.info("Consumer Started");
     while (true) {
-      ConsumerRecords<String, byte[]> records = consumer.poll(Duration.ofMillis(100));
+      var records = consumer.poll(Duration.ofMillis(100));
 
       for (ConsumerRecord<String, byte[]> record : records) {
 
