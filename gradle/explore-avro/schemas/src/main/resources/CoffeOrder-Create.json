@@ -1,0 +1,25 @@
+{
+  "id": 164,
+  "name": "Sankha Subhra Ghosh",
+  "nickName": "",
+  "store": {
+    "id": 205,
+    "address": {
+      "addressLine1": "189 Manhattan Ave",
+      "city": "Jersey City",
+      "state_province": "NJ",
+      "country": "USA",
+      "zip": "07307"
+    }
+  },
+  "orderLineItems": [
+    {
+      "name": "Caffe Latte",
+      "size": "MEDIUM",
+      "quantity": 1,
+      "cost": 3.99
+    }
+  ],
+  "ordered_time": "2022-06-16T18:40:55.472",
+  "status": "NEW"
+}

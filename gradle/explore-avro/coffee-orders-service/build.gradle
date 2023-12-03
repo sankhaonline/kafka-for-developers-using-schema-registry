@@ -21,6 +21,7 @@ repositories {
 }
 
 dependencies {
+    implementation project(':schemas')
     implementation "org.apache.avro:avro:1.11.3"
 
     //implementation "org.apache.avro:avro-tools:${avroVersion}"
@@ -39,16 +40,6 @@ dependencies {
     //test-implementation
     testImplementation "org.junit.jupiter:junit-jupiter:5.10.1"
 }
-
-def generateAvro = tasks.register("generateAvro", GenerateAvroJavaTask) {
-    source("src/main/avro")
-    outputDir = file("src/main/java")
-}
-
-tasks.named("compileJava").configure {
-    source(generateAvro)
-}
-
 
 test {
     useJUnitPlatform()
