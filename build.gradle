@@ -1,0 +1,11 @@
+plugins {
+  id "org.sonarqube" version "4.4.1.3373"
+}
+
+sonar {
+  properties {
+    property "sonar.projectKey", "sankhaonline_kafka-for-developers-using-schema-registry"
+    property "sonar.organization", "sankhaonline"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
+}
