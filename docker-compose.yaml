@@ -1,8 +1,8 @@
 ---
-version: '3.6'
+version: '3.8'
 services:
   zookeeper:
-    image: confluentinc/cp-zookeeper:7.1.0
+    image: confluentinc/cp-zookeeper:latest
     platform: linux/amd64
     hostname: zookeeper
     container_name: zookeeper
@@ -13,7 +13,7 @@ services:
       ZOOKEEPER_TICK_TIME: 2000
 
   broker:
-    image: confluentinc/cp-server:7.1.0
+    image: confluentinc/cp-server:latest
     platform: linux/amd64
     hostname: broker
     container_name: broker
@@ -43,7 +43,7 @@ services:
       CONFLUENT_SUPPORT_CUSTOMER_ID: 'anonymous'
 
   schema-registry:
-     image: confluentinc/cp-schema-registry:7.1.0
+     image: confluentinc/cp-schema-registry:latest
      platform: linux/amd64
      hostname: schema-registry
      container_name: schema-registry
